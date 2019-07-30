@@ -3,11 +3,13 @@ namespace AHT\Blog\Block;
 class Index extends \Magento\Framework\View\Element\Template
 {
   
+    protected $_postFactory;
+   
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context
         )
     {
-        parent::__construct($context);
+      parent::__construct($context);
     }
 
     public function getBlogInfo(){
@@ -16,7 +18,7 @@ class Index extends \Magento\Framework\View\Element\Template
 
     public function getPosts()
     {
-        $post=$this->_postFactory->create();
+        $post = $this->_postFactory->create();
                $collection=$post->getCollection();
                return $collection;
     }

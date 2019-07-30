@@ -11,8 +11,9 @@ class Test extends \Magento\Framework\App\Action\Action{
     }
 
     public function execute()  {
-        echo "AHT Blog";
-        exit;
+        // echo "AHT Blog";
+        // exit;
+        return $this->pageFactory->create();
     }    
 }
 

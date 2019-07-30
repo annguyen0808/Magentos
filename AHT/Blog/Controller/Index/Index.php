@@ -3,18 +3,20 @@ namespace AHT\Blog\Controller\Index;
 
 class Index extends \Magento\Framework\App\Action\Action{
 
-    protected $pageFactory;
+    protected $_pageFactory;
 
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
         \Magento\Framework\View\Result\PageFactory $pageFactory
         ) {
-        $this->pageFactory=$pageFactory;
+        $this->_pageFactory=$pageFactory;
         return parent::__construct($context);
     }
 
     public function execute()  {
-        return $this->pageFactory->create();
+        // echo "fasdfa";
+        // exit;
+        return $this->_pageFactory->create();
     }    
 }
 
