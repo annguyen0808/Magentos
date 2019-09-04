@@ -7,13 +7,13 @@ interface ContactSearchResultsInterface extends \Magento\Framework\Api\SearchRes
 
     /**
      * Get Post list.
-     * @return \AHT\Blog\Api\Data\PostInterface[]
+     * @return \Blog\Post\Api\Data\ContactInterface[]
      */
     public function getItems();
 
     /**
      * Set name list.
-     * @param \AHT\Blog\Api\Data\PostInterface[] $items
+     * @param \Blog\Post\Api\Data\ContactInterface[] $items
      * @return $this
      */
     public function setItems(array $items);

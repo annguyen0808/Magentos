@@ -7,21 +7,26 @@ class Index extends \Magento\Backend\App\Action
     const ADMIN_RESOURCE = 'Index';
 
     protected $resultPageFactory;
-
+    protected $ContactFactory;
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
-        \Magento\Framework\View\Result\PageFactory $resultPageFactory)
+        \Magento\Framework\View\Result\PageFactory $resultPageFactory,
+        \Blog\Post\Model\ContactFactory $ContactFactory
+        )
+        
     {
+        $this->ContactFactory=$ContactFactory;
         $this->resultPageFactory = $resultPageFactory;
         parent::__construct($context);
     }
 
     public function execute()
     {
-        $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('Blog_Post::post');
-        $resultPage->getConfig()->getTitle()->prepend(__('Banner Banner'));//cài đặt tiêu đề
-
-        return $resultPage;
+        // // echo "dsfs";
+        //   $allnews = $this->ContactFactory->create();
+        //   $newsCollection = $allnews->getCollection();
+        //   var_dump($newsCollection->getData());
+        //   die();
+        return $this->resultPageFactory->create();
     }
 }

@@ -2,8 +2,6 @@
 namespace Blog\Post\Model;
 
 
-
-
 use Blog\Post\Api\Data;
 use Blog\Post\Api\ContactRepositoryInterface;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
