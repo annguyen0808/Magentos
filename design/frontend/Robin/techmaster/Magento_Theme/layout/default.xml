@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+        <referenceContainer name="header.container" htmlId="header">
+            <referenceContainer name="header.panel.wrapper" htmlClass="header_top"/>
+
+            <referenceContainer name="header-wrapper" htmlClass="header-middle">
+                <container  htmlClass="container" htmlTag="div">
+                    <container  htmlClass="row" htmlTag="div">
+                        <container htmlTag="div" htmlClass="col-sm-4">
+                            <container  htmlTag="div" htmlClass="logo pull-left">
+
+                            </container>
+                            <container htmlTag="div" htmlClass="btn-group pull-right">
+
+                                <container htmlTag="div" htmlClass="btn-group">
+                                </container>
+                                <container htmlTag="div" htmlClass="btn-group">
+                                </container>
+                            </container>
+                        </container>
+                        <container htmlTag="div" htmlClass="col-sm-8">
+                             <container name="header-shop-menu" htmlTag="div" htmlClass="shop-menu pull-right" />                      
+                        </container> 
+                    </container>
+                </container>
+            </referenceContainer>
+            <!-- đổi tên class cho nó  -->
+            <referenceContainer name="page.top" htmlClass="header-bottom" htmlTag="div"/>
+            
+        </referenceContainer>
+<!-- elemen tên của page hoặc block của trang cần chuyên tới ở đây cần page.top-->
+       <!-- destination đích đến  -->
+       <!-- before và after : Xác định vị trí của element -->
+       <!-- chuyền cả cái element page.top vào trong header.container -->
+        <move element="page.top" destination="header.container" after="header-wrapper"/>
+        <move element="top.links" destination="header-shop-menu" />
+        <!-- <move element="logo" destination="header-logo-menu"> -->
+
+        <!-- xóa 1 đoạn ko cần thiết name tên của block đó remove="true" -->
+        <referenceBlock name="report.bugs" remove="true"/>
+
+    </body>
+</page>
