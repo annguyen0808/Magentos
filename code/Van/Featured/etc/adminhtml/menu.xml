@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+      <add id="Van_Featured::level1" 
+        title="Van" 
+        translate="title" 
+        module="Van_Featured" 
+        parent="Magento_Backend::content" 
+        sortOrder="50" 
+        dependsOnModule="Van_Featured" 
+        resource="Van_Featured::level1"/>
+      <add id="Van_Featured::level2" 
+        title="Featured" 
+        translate="title" 
+        module="Van_Featured" 
+        parent="Van_Featured::level1" 
+        sortOrder="10" 
+        dependsOnModule="Van_Featured" 
+        action="Featured/index" 
+        resource="Van_Featured::level1"/>
+                
+                <add id="Van_Featured::Featured" 
+        title="Featured" 
+        translate="title" 
+        module="Van_Featured" 
+        sortOrder="51" 
+        dependsOnModule="Van_Featured" 
+        resource="Van_Featured::Featured"/>
+        
+                <add id="Van_Featured::post" 
+        title="Featured" 
+        translate="title" 
+        module="Van_Featured" 
+        parent="Van_Featured::Featured" 
+        sortOrder="10" 
+        dependsOnModule="Van_Featured" 
+        action="Featured/Index/Index" 
+        resource="Van_Featured::post"/>
+
+        <add id="Van_Featured::Featured_config" 
+        title="Featured_Configuration" 
+        translate="title" 
+        module="Van_Featured" 
+        parent="Van_Featured::Featured" 
+        sortOrder="10" 
+        dependsOnModule="Van_Featured" 
+        action="adminhtml/system_config/edit/section/Featured" 
+        resource="Van_Featured::Featured_config"/>
+    </menu>
+</config>
+
