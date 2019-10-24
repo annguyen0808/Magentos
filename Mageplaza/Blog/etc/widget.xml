@@ -28,6 +28,17 @@
             <parameter name="title" xsi:type="text" required="false" visible="true">
                 <label translate="true">Title</label>
             </parameter>
+            <!-- Description kiểu textarea -->
+
+            
+            <parameter name="Description" xsi:type="block" required="true" visible="true" sort_order="3">
+                <label translate="true">Description</label>
+
+                <block class="Mageplaza\Blog\Block\Widget\TextField"/>
+            </parameter> 
+
+             
+
             <parameter name="post_count" xsi:type="text" required="true" visible="true">
                 <label translate="true">Numbers of Posts Display</label>
                 <value>5</value>
@@ -36,6 +47,14 @@
                        source_model="Mageplaza\Blog\Model\Config\Source\WidgetShowType">
                 <label translate="true">Show Type</label>
             </parameter>
+            
+
+            <parameter name="auto" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">use slide</label>
+            </parameter>
+
+
             <parameter name="category_id" xsi:type="text" required="true" visible="true">
                 <label translate="true">Category ID</label>
                 <depends>

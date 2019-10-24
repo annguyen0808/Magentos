@@ -1,0 +1,34 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="baitap" translate="label" sortOrder="200">
+            <label>Van</label>
+        </tab>
+        <section id="baitap" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>hello-separator</class>
+            <label>helloworld</label>
+            <tab>baitap</tab>
+            <resource>Van_Baitap::news_config</resource>
+            <group id="general" translate="label" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="title" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                    <comment>This is a title</comment>
+                </field>
+                <field id="textarea" translate="label" type="textarea" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Textarea</label>
+                    <comment>This is a textarea</comment>
+                </field>
+
+                <field id="image" translate="label comment" type="image" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="sytem/filesystemm/media" scope_info="1">baitap</upload_dir>
+                   <comment><![CDATA[Choose your website or organize image. (jpeg, gif, png)]]></comment>
+                </field>
+                
+
+            </group>
+        </section>
+
+    </system>
+</config>

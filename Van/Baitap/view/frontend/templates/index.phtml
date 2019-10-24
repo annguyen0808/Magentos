@@ -1,4 +1,4 @@
-<?php
-  echo $block->getHelloWorld();
-
-?>
+<h2 ><?= $block->getTitle()?></h2>
+<p ><?= $block->getTextarea()?></p>
+<?= $block->getImage()?>
+<img class="image" src="<?=$block->getImage()?>" alt="error image"/>
