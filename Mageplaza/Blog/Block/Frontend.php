@@ -51,6 +51,10 @@ class Frontend extends Template
     /**
      * @type \Magento\Store\Model\StoreManagerInterface
      */
+
+    public $dataSlide;
+
+    
     public $store;
 
     /**

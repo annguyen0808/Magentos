@@ -19,8 +19,14 @@
  */
 
 var config = {
+   
     paths: {
+        owlcarousel: 'Mageplaza_Blog/js/owl.carousel.min',
         comment: 'Mageplaza_Blog/js/comment',
         categoryTree: 'Mageplaza_Blog/js/categorytree'
-    }
+    },
+    shim: {
+            'slick': ['jquery']
+    },
+  
 };

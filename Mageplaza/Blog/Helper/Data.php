@@ -62,6 +62,7 @@ class Data extends CoreHelper
     const TYPE_TOPIC         = 'topic';
     const TYPE_AUTHOR        = 'author';
     const TYPE_MONTHLY       = 'month';
+    const TYPE_YSNO          ='0'; 
 
     /**
      * @var PostFactory

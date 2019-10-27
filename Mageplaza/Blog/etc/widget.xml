@@ -43,13 +43,22 @@
                 <label translate="true">Numbers of Posts Display</label>
                 <value>5</value>
             </parameter>
-            <parameter name="show_type" xsi:type="select" required="false" visible="true"
+
+            <parameter name="show_grit_list" xsi:type="select" required="false" visible="true"
+                       source_model="Mageplaza\Blog\Model\Config\Source\WidgetGritList">
+                <label translate="true">Show Grit or List</label>
+                 <depends>
+                    <parameter name="slide" value="0"/>
+                </depends>
+            </parameter>
+
+             <parameter name="show_type" xsi:type="select" required="false" visible="true"
                        source_model="Mageplaza\Blog\Model\Config\Source\WidgetShowType">
                 <label translate="true">Show Type</label>
             </parameter>
             
 
-            <parameter name="auto" xsi:type="select" visible="true"
+            <parameter name="slide" xsi:type="select" visible="true"
                        source_model="Magento\Config\Model\Config\Source\Yesno">
                 <label translate="true">use slide</label>
             </parameter>

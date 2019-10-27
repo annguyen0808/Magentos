@@ -22,13 +22,17 @@
 /** @var \Mageplaza\Blog\Block\Widget\Posts $block */
 
 $posts = $block->getCollection();
+$value =$this->getData('slide');
+echo $value;
 ?>
+
 <div class="blog-widget-title"><a></a></div>
 <div class="post-list-container mpcss" id="mpblog-list-container">
     <div class="widget-title">
         <a href="<?= $block->getBlogUrl(''); ?>"><?= $block->getTitle(); ?></a>
     </div>
-    <div class="row">
+    <!-- <div class="a"> -->
+    <div class="row  ">
         <?php foreach ($posts as $post) : ?>
             <div class="post-list-item">
                 <div class="post-item-wraper">
@@ -66,4 +70,52 @@ $posts = $block->getCollection();
             </div>
         <?php endforeach; ?>
     </div>
+    <!-- </div> -->
+   
 </div>
+<script type="text/javascript">
+  require(['jquery'], function($) {
+    var $a = <?php echo $value ?>;
+           console.log($a);
+           if($a==1){
+               $("#mpblog-list-container >div:nth-child(2)").addClass("brand-slider owl-carousel");
+           }
+  });
+</script>
+
+<script type="text/javascript">
+        require(['jquery', 'owlcarousel'], function($) {
+           var $a = <?php echo $value ?>;
+           console.log($a);
+       
+            $('.brand-slider').owlCarousel({
+                responsive:{
+                    480:{
+                        items:1
+                    },
+                    768:{
+                        items:2
+                    },
+                    992:{
+                        items:3
+                    },
+                    1200:{
+                        items:4
+                    }
+                },
+                autoplay:false,
+                loop:true,
+                nav : true,
+                dots: false,
+                autoplaySpeed : 500,
+                navSpeed : 500,
+                dotsSpeed : 500,
+                autoplayHoverPause: true,
+                margin:30
+            });
+
+          
+            
+        });
+    </script>
+
