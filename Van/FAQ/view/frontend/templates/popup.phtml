@@ -1,0 +1,38 @@
+
+<div class="faq-click">
+    <button >Click FAQ</button>
+</div>
+
+<div class="callfor-popup">
+   <h2>Simple Modal</h2>
+   <?php   echo $block->getLayout()
+                      ->createBlock('Magento\Cms\Block\Block')
+                      ->setBlockId('training-block')
+                      ->toHtml(); ?>
+</div>
+<script>
+   require(
+       [
+           'jquery',
+           'Magento_Ui/js/modal/modal'
+       ],
+       function (
+           $,
+           modal
+       ) {
+           var modaloption = {
+            type: 'popup',
+            responsive: true,
+            innerScroll: true,
+            title:'Modal Popup',
+              
+           };
+           var callforoption = modal(modaloption, $('.callfor-popup'));
+            $('.faq-click button').on('click', function() {
+            $('.callfor-popup').modal('openModal');
+            return false;
+        });
+       }
+   );
+</script>
+
