@@ -1,6 +1,12 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
-  <event name="checkout_cart_product_add_after">
-		<observer name="customprice" instance="Van\EventStock\Observer\AfterPlaceOrder" />
+    <!-- <event name="checkout_cart_product_add_after">
+		<observer name="customprice" instance="Van\EventStock\Observer\AfterAddProduct" />
+	</event> -->
+	 <!-- <event name="sales_order_place_after">
+        <observer name="sales_vat_request_params_order_comment" instance="Magento\Sales\Observer\Frontend\AddVatRequestParamsOrderComment" />
+    </event> -->
+	<event name="checkout_onepage_controller_success_action">
+		<observer name="customstatus" instance="Van\EventStock\Observer\AfterPlaceOrder" />
 	</event>
 </config>
