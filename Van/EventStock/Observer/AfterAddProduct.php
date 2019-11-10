@@ -1,5 +1,5 @@
 <?php
-
+// checkout_cart_product_add_after event magento 2
 namespace Van\EventStock\Observer;
 
     use Magento\Framework\Event\ObserverInterface;
